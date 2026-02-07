@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MCP Lab – Google Tools Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>MCP Lab: Google Tools (Demo)</h1>
+    <p class="subtitle">
+      Learn MCP concepts by calling a tiny MCP-style server with two Google-themed tools.
+    </p>
+
+    <section class="panel">
+      <h2>1. Discover tools (tools/list)</h2>
+      <button id="btn-list-tools">List Tools</button>
+      <pre id="tools-output" class="code-block"></pre>
+    </section>
+
+    <section class="panel">
+      <h2>2. Call a tool (tools/call)</h2>
+
+      <label for="tool-select"><strong>Tool:</strong></label>
+      <select id="tool-select">
+        <option value="google_search">google_search</option>
+        <option value="google_calendar_list">google_calendar_list</option>
+      </select>
+
+      <div id="tool-inputs">
+        <div data-tool="google_search" class="tool-input active">
+          <label><strong>query</strong></label>
+          <input type="text" id="input-query" placeholder="e.g. MCP protocol" />
+        </div>
+
+        <div data-tool="google_calendar_list" class="tool-input">
+          <label><strong>calendar_id</strong></label>
+          <input type="text" id="input-calendar-id" placeholder="e.g. primary" />
+        </div>
+      </div>
+
+      <button id="btn-call-tool">Call Tool</button>
+
+      <h3>Request JSON</h3>
+      <pre id="request-output" class="code-block"></pre>
+
+      <h3>Response JSON</h3>
+      <pre id="response-output" class="code-block"></pre>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
