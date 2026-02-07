@@ -1,5 +1,4 @@
 import json
-
 def google_search(query: str):
     return {
         "tool": "google_search",
